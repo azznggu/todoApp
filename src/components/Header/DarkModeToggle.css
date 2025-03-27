@@ -1,0 +1,8 @@
+.dark-mode-toggle {
+  padding: 8px 16px;
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+} 

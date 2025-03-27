@@ -1,5 +1,51 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #eeeeee;
+  --header-bg: #f8f9fa;
+  --button-bg: #ffffff;
+  --button-text: #333333;
+  --button-border: #cccccc;
+  --button-active-bg: #007bff;
+  --button-active-text: #ffffff;
+  --delete-button-bg: #dc3545;
+  --delete-button-hover: #c82333;
+  --add-button-bg: #28a745;
+  --add-button-hover: #218838;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --header-bg: #2c2c2c;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+  --button-border: #444444;
+  --button-active-bg: #0056b3;
+  --button-active-text: #ffffff;
+  --delete-button-bg: #dc3545;
+  --delete-button-hover: #c82333;
+  --add-button-bg: #28a745;
+  --add-button-hover: #218838;
+  --input-bg: #333333;
+  --input-border: #444444;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .App-logo {
@@ -14,14 +60,32 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.header-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1rem;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.dark-mode-toggle {
+  padding: 8px 16px;
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
 }
 
 .App-link {
@@ -35,4 +99,122 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: var(--button-active-bg);
+  color: var(--button-active-text);
+  border-color: var(--button-active-bg);
+}
+
+.main-content {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 12px;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.todo-text {
+  flex: 1;
+  color: var(--text-color);
+}
+
+.todo-date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  background: var(--delete-button-bg);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: var(--delete-button-hover);
+}
+
+.app-footer {
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: var(--header-bg);
+  border-radius: 8px;
+}
+
+.todo-form {
+  margin-top: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.add-button {
+  padding: 8px 16px;
+  background: var(--add-button-bg);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background: var(--add-button-hover);
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 20px;
 }

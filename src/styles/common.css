@@ -1,0 +1,64 @@
+@import './themes.css';
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.app-footer {
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background: var(--button-active-bg);
+  color: var(--button-active-text);
+  border: none;
+}
+
+.btn-danger {
+  background: var(--delete-button-bg);
+  color: white;
+  border: none;
+}
+
+.btn-success {
+  background: var(--add-button-bg);
+  color: white;
+  border: none;
+}
+
+/* 공통 입력 필드 스타일 */
+.input-field {
+  padding: 8px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+} 

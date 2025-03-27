@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #eeeeee;
+  --header-bg: #f8f9fa;
+  --button-bg: #ffffff;
+  --button-text: #333333;
+  --button-border: #cccccc;
+  --button-active-bg: #007bff;
+  --button-active-text: #ffffff;
+  --delete-button-bg: #dc3545;
+  --delete-button-hover: #c82333;
+  --add-button-bg: #28a745;
+  --add-button-hover: #218838;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --header-bg: #2c2c2c;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+  --button-border: #444444;
+  --button-active-bg: #0056b3;
+  --button-active-text: #ffffff;
+  --delete-button-bg: #dc3545;
+  --delete-button-hover: #c82333;
+  --add-button-bg: #28a745;
+  --add-button-hover: #218838;
+  --input-bg: #333333;
+  --input-border: #444444;
+} 
